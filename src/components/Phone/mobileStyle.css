@@ -110,7 +110,7 @@ and (min-width : 320px) {
 
     .phone-pad-input-text {
         margin: auto;
-        width: calc(100% - 36px);
+        width: 276px;
         padding: 12px;
         border: 1px solid gray;
         border-radius: 12px;
@@ -119,8 +119,10 @@ and (min-width : 320px) {
     }
 
     .phone-pad-input-numbers {
+        margin: auto;
         margin-top: 106px;
         padding-top: 20px;
+        width: 278px;
         text-align: center;
     }
 
