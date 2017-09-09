@@ -27,7 +27,8 @@ export default class BeeperContainer extends Component{
 
         this.setState(ps => ({
             phoneNumberToSend : !ps.numberCount ?
-              `${item}` : ps.phoneNumberToSend + (item === 1 ? ` ${item}` : `${item}`),
+              (item === 1 ? ` ${item}` : `${item}`) :
+              ps.phoneNumberToSend + (item === 1 ? ` ${item}` : `${item}`),
             numberCount: ps.numberCount + 1
           }), () => {
           if (this.state.numberCount > 7)
@@ -42,29 +43,28 @@ export default class BeeperContainer extends Component{
         return this.setState(ps => ({
           phoneNumberToSend: 'message',
           numberCount: 0,
-          sendNumber: parseInt(ps.phoneNumberToSend.replace(/\s/, ''))
+          sendNumber: parseInt(ps.phoneNumberToSend.replace(/\s/g, ''))
         }));
       }
 
-      console.log(this.state.sendNumber);
-      console.log(parseInt(this.state.phoneNumberToSend.replace(/\s/, '')));
+      let number = this.state.sendNumber, msg = parseInt(this.state.phoneNumberToSend.replace(/\s/g, ''));
+      sendBeep({number, msg})
+        .then((res) => {
+          this.setState({ phoneNumberToSend: 'success' },
+            () => {
 
-      sendBeep({number: this.state.sendNumber, msg: parseInt(this.state.phoneNumberToSend)})
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error));
+              setTimeout(() => {
+                this.setState({
+                  phoneNumberToSend: 'number',
+                  numberCount: 0,
+                  sendNumber: undefined
+                })
+              }, 2000)
 
-      this.setState({ phoneNumberToSend: 'success' },
-        () => {
+            });
 
-          setTimeout(() => {
-            this.setState({
-              phoneNumberToSend: 'number',
-              numberCount: 0,
-              sendNumber: undefined
-            })
-          }, 2000)
-
-        });
+        // console.log(response);
+      }).catch((error) => console.log(error));
     }
 
     render(){

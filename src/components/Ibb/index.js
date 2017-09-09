@@ -9,7 +9,7 @@ export default class Phone extends PureComponent{
 
     render(){
 
-        let resultText = this.props.currentList.msg;
+        let resultText = String(this.props.currentList.msg).replace(/1/g, ' 1');
         return(
         <div>
             <div className="lightbox-blanket_ibb">
