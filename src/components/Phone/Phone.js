@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 
 import Button from './Button';
 import './style.css';
+import './mobileStyle.css';
+import './desktopStyle.css';
 
 export default class Phone extends PureComponent{
 
