@@ -9,7 +9,7 @@ export default class Phone extends PureComponent{
 
     render(){
 
-        let resultText = this.props.currentList.number + ", " + this.props.currentList.msg;
+        let resultText = this.props.currentList.msg;
         return(
         <div>
             <div className="lightbox-blanket_ibb">

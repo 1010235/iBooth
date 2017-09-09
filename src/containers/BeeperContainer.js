@@ -36,12 +36,35 @@ export default class BeeperContainer extends Component{
     }
 
     onSubmit(){
-        let phoneToSend = this.state.phoneNumberToSend.replace(/\s/g, "");
+      if (isNaN(parseInt(this.state.phoneNumberToSend))) return;
 
-        sendBeep(phoneToSend)
+      if (!this.state.sendNumber) {
+        return this.setState(ps => ({
+          phoneNumberToSend: 'message',
+          numberCount: 0,
+          sendNumber: parseInt(ps.phoneNumberToSend.replace(/\s/, ''))
+        }));
+      }
+
+      console.log(this.state.sendNumber);
+      console.log(parseInt(this.state.phoneNumberToSend.replace(/\s/, '')));
+
+      sendBeep({number: this.state.sendNumber, msg: parseInt(this.state.phoneNumberToSend)})
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
 
+      this.setState({ phoneNumberToSend: 'success' },
+        () => {
+
+          setTimeout(() => {
+            this.setState({
+              phoneNumberToSend: 'number',
+              numberCount: 0,
+              sendNumber: undefined
+            })
+          }, 2000)
+
+        });
     }
 
     render(){

@@ -10,9 +10,6 @@ export function getBeeperNewList(number){
     return axios.get(`${SERVER_URL}/list/${number}/new`);
 }
 
-export function sendBeep(number){
-    return axios.post(`${SERVER_URL}/send`, {
-        number : parseInt(number),
-        msg : 1005,
-    });
+export function sendBeep(obj){
+    return axios.post(`${SERVER_URL}/send`, obj);
 }
