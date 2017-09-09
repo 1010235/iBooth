@@ -1,0 +1,226 @@
+@media only screen
+and (max-width : 560px)
+and (min-width : 320px) {
+    @font-face {
+        src: url(../../assets/fonts/digit.TTF);
+        font-family: digi7;
+    }
+
+    .phone-pad-input-panel_ibb, .phone-pad-alert-panel_ibb{
+        background-color: grey;
+        height: 90px;
+        position: absolute;
+        width: 100%;
+    }
+
+    i.fa-circle-o_ibb {
+        font-size: 62px;
+        color: rgba(22, 22, 22, 0.88);
+        margin-top:10px;
+        vertical-align:middle;
+    }
+
+    .lightbox-blanket_ibb {
+        background-color: rgba(30, 30, 30, 0.9);
+        display: block;
+        height: 100vh;
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+    }
+
+    .pop-up-container_ibb {
+        height: 100%;
+        width: auto;
+        display: table;
+        margin: auto;
+        position: static;
+    }
+
+    .pop-up-container_ibb {
+        width: 100%;
+    }
+
+    .pop-up-container-vertical_ibb {
+        height: 100%;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    .pop-up-wrapper_ibb {
+        -webkit-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        display: block;
+        width: auto;
+        position: relative;
+        background-color: #282828;
+        display: block;
+    }
+
+    .phone-wrapper_ibb {
+        background-color: rgba(50, 50, 50, 0.4);
+    }
+
+    .phone-pad_ibb {
+        display: inline-block;
+        position:relative;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        background-color: #282828;
+    }
+
+    .phone-contacts_ibb {
+        background-color: rgba(100, 100, 100, 0.3);
+        height: calc(100%);
+        width: calc(100% + 2px);
+        display: inline-block;
+        position: relative;
+    }
+
+    .phone-pad-input-panel_ibb {
+        background-color: #282828;
+    }
+
+    .phone-pad-alert-panel_ibb{
+        background-color: #5cb85c;
+        color:white;
+        font-size:18px;
+        margin-top:25px;
+        padding-top:18px;
+        height: 60px;
+        text-align:center;
+        vertical-align:middle;
+    }
+
+    .phone-pad-input-text_ibb {
+        margin: auto;
+        width: 276px;
+        border: 16px solid gray;
+        border-radius: 12px;
+        box-shadow: -2px -2px -2px gray;
+        vertical-align: middle;
+        background-color: #363636;
+        padding-bottom: 12px;
+    }
+
+    .phone-pad-input-call_ibb {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .contact-card_ibb {
+        height: 100px;
+        width: auto;
+        background-color: white;
+        margin: 10px 0px;
+        box-shadow: 10px 2px 2px 2px rgba(50,50,50, 0.6);
+    }
+
+    .contact-card_ibb:first-child {
+        margin-top: 0;
+    }
+
+    .contact-image-wrapper_ibb {
+        width: 100px;
+        padding: 10px;
+        display: block;
+        display: inline-block;
+    }
+
+    .contact-image-wrapper_ibb img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .contact-details_ibb {
+        display: inline-block;
+        width: calc(100% - 110px);
+        margin: 10px 10px 10px 0;
+        padding-top:5px;
+        overflow: hidden;
+        vertical-align:top;
+        font-size: 18px;
+    }
+
+    .contact-name_ibb {
+        font-size: 22px;
+        text-transform:capitalize;
+    }
+
+    .contact-email_ibb, .contact-phone_ibb {
+        height: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size:16px;
+    }
+
+    /* 6. Components - buttons, menus, images, etc. */
+    #number-input_ibb {
+        font-family: digi7;
+        font-size: 60px;
+        text-align:left;
+        width: 100%;
+        /* border: none; */
+        color: rgba(22, 22, 22, 0.88);
+        background-color: #829C8D;
+    }
+
+    .input-number_ibb {
+        margin: 13px;
+        padding: 0px 11px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 12px gray;
+        border: 1px solid gray;
+    }
+
+    i.fa-phone_ibb {
+        font-size: 62px;
+        color: green;
+        margin-top:10px;
+        vertical-align:middle;
+    }
+
+    .contact-phone_ibb span{
+        color: green;
+        font-size:18px;
+        font-weight:bold;
+        padding: 0 1px;
+        }
+
+        /* 7. Trumps - text helpers, often !important */
+    .hidden_ibb {
+        display: none;
+    }
+
+    .phone-bb-title_ibb {
+        padding-bottom: 6px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        font-style: italic;
+        font-weight: lighter;
+        background-color: gray;
+    }
+
+    .phone-btn_ibb {
+        padding-top: 12px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .phone-btn_ibb .fa {
+        padding: 6px 8px;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        font-weight: bolder;
+    }
+}

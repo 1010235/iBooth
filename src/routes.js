@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
-import {BeeperContainer} from './containers';
+import {BeeperContainer, IbbContainer} from './containers';
 
 class routes extends PureComponent{
 
@@ -10,6 +10,7 @@ class routes extends PureComponent{
             <Router history={browserHistory}>
                 <Route path='/'>
                     <IndexRoute component={BeeperContainer} />
+                    <Route path='ibb' component={IbbContainer} />
                 </Route>
             </Router>
         );

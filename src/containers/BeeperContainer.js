@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import {Phone} from '../components';
+import {sendBeep} from '../lib/toServer';
 
 export default class BeeperContainer extends Component{
 
@@ -36,9 +37,12 @@ export default class BeeperContainer extends Component{
     }
 
     onSubmit(){
+        let phoneToSend = this.state.phoneNumberToSend.replace(/\s/g, "");
 
-        console.log(this.state.numberCounter);
-        console.log(this.state.phoneNumberToSend.replace(/\s/g, ""));
+        sendBeep(phoneToSend)
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
+        
     }
 
     render(){
