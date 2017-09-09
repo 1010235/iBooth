@@ -146,14 +146,6 @@ input[type="button"] {}
   width: 100%;
 }
 
-#number-input {
-  font-family: digi7;
-  font-size: 45px;
-  text-align:left;
-  width: 100%;
-  color: rgba(22, 22, 22, 0.88);
-}
-
 .phone-pad-alert-panel{
   background-color: #5cb85c;
   color:white;
@@ -263,6 +255,13 @@ input[type="button"] {}
 
 
 /* 6. Components - buttons, menus, images, etc. */
+#number-input {
+  font-family: digi7;
+  font-size: 45px;
+  text-align:left;
+  width: 100%;
+  color: rgba(22, 22, 22, 0.88);
+}
 
 .input-number {
   padding: 16px 26px;
