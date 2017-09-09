@@ -1,0 +1,236 @@
+@media only screen
+and (max-width : 560px)
+and (min-width : 320px) {
+    @font-face {
+        src: url(../../assets/fonts/digit.TTF);
+        font-family: digi7;
+    }
+
+    .phone-pad-input-panel, .phone-pad-alert-panel{
+        background-color: grey;
+        height: 90px;
+        position: absolute;
+        width: 100%;
+    }
+
+    i.fa-circle-o {
+        font-size: 62px;
+        color: rgba(22, 22, 22, 0.88);
+        margin-top:10px;
+        vertical-align:middle;
+    }
+
+    .lightbox-blanket {
+        background-color: rgba(30, 30, 30, 0.9);
+        display: block;
+        height: 100vh;
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+    }
+
+    .pop-up-container {
+        height: 100%;
+        width: auto;
+        display: table;
+        margin: auto;
+        position: static;
+    }
+
+    .pop-up-container {
+        width: 100%;
+    }
+
+    .pop-up-container-vertical {
+        height: 100%;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    .pop-up-wrapper {
+        -webkit-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
+        display: block;
+        width: auto;
+        position: relative;
+        background-color: white;
+        background: transparent url('http://cdn.pcwallart.com/images/pink-gradient-texture-wallpaper-4.jpg') no-repeat center center;
+        display: block;
+    }
+
+    .phone-wrapper {
+        background-color: rgba(50, 50, 50, 0.4);
+    }
+
+    .phone-pad {
+        display: inline-block;
+        position:relative;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        background-color: #E9EBEE;
+        border: 12px solid gray;
+    }
+
+    .phone-contacts {
+        background-color: rgba(100, 100, 100, 0.3);
+        height: calc(100%);
+        width: calc(100% + 2px);
+        display: inline-block;
+        position: relative;
+    }
+
+    .phone-pad-input-panel {
+        background-color: #E9EBEE;
+        padding-top: 16px;
+    }
+
+    .phone-pad-alert-panel{
+        background-color: #5cb85c;
+        color:white;
+        font-size:18px;
+        margin-top:25px;
+        padding-top:18px;
+        height: 60px;
+        text-align:center;
+        vertical-align:middle;
+    }
+
+    .phone-pad-input-add {
+        display: inline-block;
+        width: 11%;
+        text-align:center;
+        vertical-align: middle;
+        color:#888;
+    }
+
+    .phone-pad-input-text {
+        margin: auto;
+        width: calc(100% - 36px);
+        padding: 12px;
+        border: 1px solid gray;
+        border-radius: 12px;
+        box-shadow: -2px -2px -2px gray;
+        vertical-align: middle;
+    }
+
+    .phone-pad-input-numbers {
+        margin-top: 106px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .phone-pad-input-number {
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .phone-pad-input-call {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .contact-card {
+        height: 100px;
+        width: auto;
+        background-color: white;
+        margin: 10px 0px;
+        box-shadow: 10px 2px 2px 2px rgba(50,50,50, 0.6);
+    }
+
+    .contact-card:first-child {
+        margin-top: 0;
+    }
+
+    .contact-image-wrapper {
+        width: 100px;
+        padding: 10px;
+        display: block;
+        display: inline-block;
+    }
+
+    .contact-image-wrapper img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .contact-details {
+        display: inline-block;
+        width: calc(100% - 110px);
+        margin: 10px 10px 10px 0;
+        padding-top:5px;
+        overflow: hidden;
+        vertical-align:top;
+        font-size:18px;
+    }
+
+    .contact-name {
+        font-size: 22px;
+        text-transform:capitalize;
+    }
+
+    .contact-email, .contact-phone {
+        height: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size:16px;
+    }
+
+    /* 6. Components - buttons, menus, images, etc. */
+    #number-input {
+        font-family: digi7;
+        font-size: 60px;
+        text-align:left;
+        width: 100%;
+        color: rgba(22, 22, 22, 0.88);
+        background-color: #829C8D;
+    }
+
+    .input-number {
+        margin: 13px;
+        padding: 0px 11px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 12px gray;
+        border: 1px solid gray;
+    }
+
+    .number {
+        padding: 12px 10px;
+        font-size: 28px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .number span{
+        clear: both;
+        display: block;
+        user-select: none;
+    }
+
+    i.fa-phone {
+        font-size: 62px;
+        color: green;
+        margin-top:10px;
+        vertical-align:middle;
+    }
+
+    .contact-phone span{
+        color: green;
+        font-size:18px;
+        font-weight:bold;
+        padding: 0 1px;
+        }
+
+        /* 7. Trumps - text helpers, often !important */
+    .hidden {
+        display: none;
+    }
+}

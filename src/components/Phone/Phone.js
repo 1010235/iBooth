@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 
 import Button from './Button';
 import './style.css';
+import './mobileStyle.css';
+import './desktopStyle.css';
 
 export default class Phone extends PureComponent{
 
@@ -29,12 +31,8 @@ export default class Phone extends PureComponent{
                                         />)
                                     })}
                                     </div>
-                                    <div className="phone-pad-input-home" onClick={this.props.onSubmit}>
+                                    <div className="phone-pad-input-call" onClick={this.props.onSubmit}>
                                         <i className="fa fa-circle-o"></i>
-                                    </div>
-                                </div>
-                                <div className="phone-contacts-wrapper">
-                                    <div className="phone-contacts">
                                     </div>
                                 </div>
                             </div>
@@ -42,11 +40,7 @@ export default class Phone extends PureComponent{
                     </div>
                 </div>
             </div>
-
-            <div className="random-background">
-            </div>
         </div>
-
         );
     }
 }
