@@ -9,7 +9,7 @@ export default class BeeperContainer extends Component{
         this.state = {
             buttonList : [1, 2, 3, 4, 5, 6, 7, 8, 9, "*", 0, "#"],
             phoneNumberToSend : "number",
-            numberCounter: 0
+            numberCount: 0
         };
 
         this.onClick = this.onClick.bind(this);
@@ -22,23 +22,44 @@ export default class BeeperContainer extends Component{
 
     onClick(e, item){
         e.preventDefault();
-        if (this.state.numberCounter === 20) return;
+        if (this.state.numberCount === 20) return;
 
         this.setState(ps => ({
-            phoneNumberToSend : !ps.numberCounter ?
+            phoneNumberToSend : !ps.numberCount ?
               `${item}` : ps.phoneNumberToSend + (item === 1 ? ` ${item}` : `${item}`),
-            numberCounter: ps.numberCounter + 1,
-            isFirst: false
+            numberCount: ps.numberCount + 1
           }), () => {
-          if (this.state.numberCounter > 7)
+          if (this.state.numberCount > 7)
             document.querySelector('#number-input').scrollLeft = 10000;
         });
     }
 
     onSubmit(){
+      if (isNaN(parseInt(this.state.phoneNumberToSend))) return;
 
-        console.log(this.state.numberCounter);
-        console.log(this.state.phoneNumberToSend.replace(/\s/g, ""));
+      if (!this.state.sendNumber) {
+        return this.setState(ps => ({
+          phoneNumberToSend: 'message',
+          numberCount: 0,
+          sendNumber: parseInt(ps.phoneNumberToSend)
+        }));
+      }
+
+      console.log('number: ' +  this.state.sendNumber);
+      console.log('msg: ' +  parseInt(this.state.phoneNumberToSend));
+
+      this.setState({ phoneNumberToSend: 'success' },
+        () => {
+
+        setTimeout(() => {
+          this.setState({
+            phoneNumberToSend: 'number',
+            numberCount: 0,
+            sendNumber: undefined
+          })
+        }, 2000)
+
+      });
     }
 
     render(){
