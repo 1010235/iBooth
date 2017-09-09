@@ -16,11 +16,9 @@ export default class Phone extends PureComponent{
                             <div className="phone-wrapper">
                                 <div className="phone-pad">
                                     <div className="phone-pad-input-panel">
-                                        <div className="phone-pad-input-add"><i className="fa fa-plus"></i></div>
                                         <div className="phone-pad-input-text">
                                             <input id="number-input" type="tel" readOnly="readonly" value={this.props.phoneNumberToSend}/>
                                         </div>
-                                        <div className="phone-pad-input-remove"><i className="fa fa-remove"></i></div>
                                     </div>
                                     <div className="phone-pad-input-numbers">
                                     {this.props.buttonList.map((item, index) => {
@@ -31,8 +29,8 @@ export default class Phone extends PureComponent{
                                         />)
                                     })}
                                     </div>
-                                    <div className="phone-pad-input-call" onClick={this.props.onSubmit}>
-                                        <i className="fa fa-phone"></i>
+                                    <div className="phone-pad-input-home" onClick={this.props.onSubmit}>
+                                        <i className="fa fa-circle-o"></i>
                                     </div>
                                 </div>
                                 <div className="phone-contacts-wrapper">
