@@ -10,7 +10,7 @@ export default class BeeperContainer extends Component{
         this.state = {
             buttonList : [1, 2, 3, 4, 5, 6, 7, 8, 9, "*", 0, "#"],
             phoneNumberToSend : "number",
-            numberCounter: 0
+            numberCount: 0
         };
 
         this.onClick = this.onClick.bind(this);
@@ -23,15 +23,14 @@ export default class BeeperContainer extends Component{
 
     onClick(e, item){
         e.preventDefault();
-        if (this.state.numberCounter === 20) return;
+        if (this.state.numberCount === 20) return;
 
         this.setState(ps => ({
-            phoneNumberToSend : !ps.numberCounter ?
+            phoneNumberToSend : !ps.numberCount ?
               `${item}` : ps.phoneNumberToSend + (item === 1 ? ` ${item}` : `${item}`),
-            numberCounter: ps.numberCounter + 1,
-            isFirst: false
+            numberCount: ps.numberCount + 1
           }), () => {
-          if (this.state.numberCounter > 7)
+          if (this.state.numberCount > 7)
             document.querySelector('#number-input').scrollLeft = 10000;
         });
     }
@@ -42,7 +41,7 @@ export default class BeeperContainer extends Component{
         sendBeep(phoneToSend)
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
-        
+
     }
 
     render(){
