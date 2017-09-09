@@ -27,7 +27,7 @@ export default class BeeperContainer extends Component{
     }
 
     onSubmit(){
-        console.log(this.state.phoneNumberToSend);
+        console.log(this.state.phoneNumberToSend.replace(/\s/g, ""));
     }
 
     render(){
