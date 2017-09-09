@@ -9,6 +9,7 @@ export default class BeeperContainer extends Component{
         this.state = {
             buttonList : [1, 2, 3, 4, 5, 6, 7, 8, 9, "*", 0, "#"],
             phoneNumberToSend : "",
+            numberCounter: 0,
         };
 
         this.onClick = this.onClick.bind(this);
@@ -21,12 +22,14 @@ export default class BeeperContainer extends Component{
 
     onClick(e, item){
         e.preventDefault();
-        this.setState({
-            phoneNumberToSend : this.state.phoneNumberToSend + item,
-        });
+        this.setState(ps => ({
+            phoneNumberToSend : this.state.phoneNumberToSend + (item === 1 ? ` ${item}` : item),
+            numberCounter: ps.numberCounter + 1
+        }));
     }
 
     onSubmit(){
+        console.log(this.state.numberCounter);
         console.log(this.state.phoneNumberToSend.replace(/\s/g, ""));
     }
 
