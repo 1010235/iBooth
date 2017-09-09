@@ -1,1 +1,6 @@
-9XD Hacks9XD Hacks9XD Hacks9XD Hacks9XD Hacks9XD Hacks9XD Hacks9XD Hacks9XD Hacks
+9XD Hacks
+
+
+yarn install / npm install
+
+yarn start / npm run start
