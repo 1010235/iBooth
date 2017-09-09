@@ -6,6 +6,17 @@ and (min-width : 320px) {
         font-family: digi7;
     }
 
+    .phone-top-bar {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    .phone-top-bar .fa {
+        padding: 4px;
+        font-size: 4px;
+        color: #000;
+    }
+
     .phone-pad-input-panel, .phone-pad-alert-panel{
         background-color: grey;
         height: 90px;
@@ -86,7 +97,7 @@ and (min-width : 320px) {
 
     .phone-pad-input-panel {
         background-color: #E9EBEE;
-        padding-top: 24px;
+        padding-top: 12px;
     }
 
     .phone-pad-alert-panel{
@@ -121,7 +132,6 @@ and (min-width : 320px) {
     .phone-pad-input-numbers {
         margin: auto;
         margin-top: 106px;
-        padding-top: 20px;
         width: 290px;
         text-align: center;
     }

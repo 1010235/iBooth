@@ -17,6 +17,15 @@ export default class Phone extends PureComponent{
                         <div className="pop-up-wrapper">
                             <div className="phone-wrapper">
                                 <div className="phone-pad">
+                                    <div className="phone-top-bar">
+                                        <i className="fa fa-circle-o"></i>
+                                        <i className="fa fa-circle-o"></i>
+                                        <i className="fa fa-circle-o"></i>
+                                        <i className="fa fa-circle-o"></i>
+                                        <i className="fa fa-circle-o"></i>
+                                        <i className="fa fa-circle-o"></i>
+
+                                    </div>
                                     <div className="phone-pad-input-panel">
                                         <div className="phone-pad-input-text">
                                             <input id="number-input" type="tel" readOnly="readonly" value={this.props.phoneNumberToSend}/>
